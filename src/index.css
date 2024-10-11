@@ -4,13 +4,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Artifika&display=swap');
 
+/* ==================== [ Global Variables ] ==================== */
+
+:root {
+  /* Fonts */
+  --primary-font: "Aclonica";
+  --secondary-font: "Artifika";
+
+  /* Solid Colors */
+  --white: #FFFFEA;
+  --black: #2E3200;
+  --primary-color: #D4D55F;
+  --secondary-color: #B1B447;
+  --terciary-color: #6C7318;
+
+  /* Others Colors */
+  --btn-highlight-shadow-color: #ffffeb80;
+  --btn-shadow-color: #2e320040;
+  --btn-invisible-border-color: #ffffeb03;
+}
+
 * {
-  font-family: "Artifika";
+  transition: all ease .2s;
+  color: var(--black);
+  font-family: var(--secondary-font);
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Aclonica";
+  font-family: var(--primary-font);
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  position: relative;
+  text-decoration: none;
+  color: var(--black);
+}
+a::before {
+  content: " ";
+  position: absolute;
+  opacity: 0;
+  width: 0%;
+  /* height: 1px; */
+  left: 50%;
+  bottom: -6px;
+  border-radius: 12px;
+  background: var(--black);
+}
+a:hover::before{
+  opacity: 1;
+  width: 100%;
+  left: 0;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  /* box-shadow: inset 0px 1px var(--whivvvvvvvvte); */
+  outline: solid 0px 2px 2px 2px 2px 2px var(--btn-shadow-color);
+  border-radius: 7px;
+  font-family: var(--primary-font);
+  color: var(--terciary-color);
+  background: var(--primary-color);
+  box-shadow: 0 4px 6px 0 var(--btn-shadow-color);
+} 
+button:hover {
+  cursor: pointer;
+  box-shadow: none;
+  outline: solid 3px var(--primary-color);
+  outline-offset: 3px;
+  color: var(--primary-color);
+  background: var(--terciary-color);
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  background: var(--white);
 }
