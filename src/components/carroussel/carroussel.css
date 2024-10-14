@@ -1,0 +1,21 @@
+.carroussel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 60vh;
+	border-radius: 7px;
+	/* background: var(); */
+}
+
+.containerInfo {
+	background: var(--terciary-color-degrade);
+}
+
+.btnControl {
+	height: 100%;
+}
+
+.btnRecipie {
+	width: 100%;
+}

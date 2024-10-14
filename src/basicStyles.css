@@ -22,6 +22,7 @@
   --btn-highlight-shadow-color: #ffffeb80;
   --btn-shadow-color: #2e320040;
   --btn-invisible-border-color: #ffffeb03;
+  --terciary-color-degrade: linear-gradient(90deg, rgba(108,115,24,1) 50%, rgba(0,0,0,0) 100%);
 }
 
 * {
@@ -37,25 +38,34 @@ a {
   text-decoration: none;
   color: var(--black);
 }
+a:hover {
+  color: var(--primary-color);
+}
 a::before {
+  transition: all ease .2s;
   content: " ";
   position: absolute;
   opacity: 0;
   width: 0%;
-  /* height: 1px; */
+  height: 2px;
   left: 50%;
   bottom: -6px;
   border-radius: 12px;
   background: var(--black);
 }
-a:hover::before{
+a:hover::before {
   opacity: 1;
   width: 100%;
   left: 0;
+  background: var(--primary-color);
 }
 
 button {
+  display: flex;
+	align-items: center;
+	justify-content: center;
   padding: 1rem;
+  gap: 1rem; 
   border: none;
   /* box-shadow: inset 0px 1px var(--whivvvvvvvvte); */
   outline: solid 0px 2px 2px 2px 2px 2px var(--btn-shadow-color);
@@ -73,6 +83,32 @@ button:hover {
   color: var(--primary-color);
   background: var(--terciary-color);
 }
+button:active {
+  color: var(--terciary-color);
+  outline: solid 0px 2px 2px 2px 2px 2px var(--btn-shadow-color);
+  background: var(--black);
+}
+
+.fa-solid {
+  color: var(--terciary-color);
+}
+button:hover .fa-solid, a:hover .fa-solid, .fa-solid:hover {
+  color: var(--primary-color);
+}
+button:active .fa-solid, a:active .fa-solid, .fa-solid:active {
+  color: var(--terciary-color);
+}
+
+.secBtn {
+  cursor: pointer;
+  box-shadow: none;
+  outline: solid 3px var(--terciary-color);
+  /* outline-offset: 3px; */
+  color: var(--terciary-color);
+  /* background: transparent; */
+  background: var(--btn-invisible-border-color);
+}
+
 
 body {
   width: 100vw;
