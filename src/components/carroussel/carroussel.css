@@ -5,11 +5,22 @@
 	width: 100%;
 	height: 60vh;
 	border-radius: 7px;
-	/* background: var(); */
+	background: var(--black);
 }
 
-.containerInfo {
-	background: var(--terciary-color-degrade);
+.containerRecipies {
+	position: relative;
+	width: 100%;
+	/* background: var(--terciary-color); */
+}
+.containerInfos {
+	z-index: 2;
+	position: absolute;
+}
+
+.imageRecipie {
+	width: 100%;
+	height: 100%;
 }
 
 .btnControl {
